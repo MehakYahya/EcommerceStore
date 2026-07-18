@@ -5,6 +5,7 @@ import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-add-product',
+  standalone: true,
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.css'],
   imports: [
