@@ -3,17 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WebProject": {
+    "untitled5": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
+
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/web-project",
+            "outputPath": "dist/untitled5",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,8 +28,6 @@
               }
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -60,14 +59,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "proxyConfig": "src/proxy.conf.json"
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "buildTarget": "WebProject:build:production"
+              "buildTarget": "untitled5:build:production"
             },
             "development": {
-              "buildTarget": "WebProject:build:development"
+              "buildTarget": "untitled5:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": "14aec26f-3dc4-4c30-9be0-87d8d3730c85"
+    "analytics": "de227904-5abb-4ce6-9480-b31396f2ecf7"
   }
 }

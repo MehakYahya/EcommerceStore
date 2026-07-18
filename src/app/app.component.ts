@@ -1,28 +1,26 @@
 import { Component } from '@angular/core';
-import { UserService } from './service/user.service';
-import {Router, RouterLink, RouterOutlet} from '@angular/router';
+import {Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {NgIf} from '@angular/common';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterLink,
-    NgIf,
-    RouterOutlet
-  ],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, NgIf],
   templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  constructor(private userService: UserService, private router: Router) {}
-
-  isLoggedIn(): boolean {
-    return this.userService.isLoggedIn();
+  isLoggedIn: boolean = false;
+  constructor(private authService: AuthService, private router: Router) {
+    this.authService.isLoggedIn.subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn;
+    });
   }
 
-  logoff() {
-    this.userService.logout();
-    alert('You have been logged out.');
-    this.router.navigate(['/login']); // Redirect to login page
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/seller/login']).then(() => {
+    });
   }
 }

@@ -1,0 +1,72 @@
+.order-summary {
+  max-width: 400px;
+  width: 550px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #D7D3BF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #C1BAA1;
+
+
+}
+
+.order-summary h2 {
+  font-size: 2rem;
+  color: #444444;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.order-statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stat-item {
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.total-orders {
+  background-color: #9c947a;
+}
+
+.delivered-orders {
+  background-color: #9c947a;
+}
+
+.pending-orders {
+  background-color: #9c947a;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .order-summary {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .stat-item {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
