@@ -1,0 +1,87 @@
+/* Cart Container */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #C1BAA1;
+  border-radius: 8px;
+  background-color: #ECEBDE; /* Lightest color for the background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 5px;
+  border: 1px solid #C1BAA1;
+}
+
+/* Product Details */
+.cart-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cart-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Remove Button */
+button {
+  background-color: #A59D84; /* Primary button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8C8673; /* Slightly darker on hover */
+}
+
+/* Continue Shopping and Proceed to Pay Buttons */
+button:last-child {
+  background-color: #C1BAA1; /* Secondary button color */
+}
+
+button:last-child:hover {
+  background-color: #A59D84; /* Darker on hover */
+}
+
+/* Empty Cart Message */
+ng-template p {
+  font-size: 1rem;
+  color: #A59D84; /* Match scheme */
+  text-align: center;
+}
+
+/* General Page Styling */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #D7D3BF; /* Softer color for separator */
+}
+
+/* Cart Item Shadow on Hover */
+.cart-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: #D7D3BF; /* Slight background highlight */
+}
